@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>write</title>
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/library/tinymce/jquery.tinymce.min.js"></script>
+    
+</head>
+<body>
+    <div>
+      @Html.DropDownList("id", ViewBag.id as List<SelectListItem>)
+       
+    </div>
+    <textarea class="tinymce"></textarea>
+
+    <script src="~/Content/library/tinymce/tinymce.min.js"></script>
+    <script src="~/Content/library/tinymce/tinymce-init.js"></script>
+    @{ 
+        foreach(var u in Model )
+        {
+            <div>
+                @u.id;
+                @foreach(var i in Model)
+                {
+                    var i = Model.select(n=>n.id)
+    
+                }
+            </div>
+        }
+
+    }
+</body>
+</html>

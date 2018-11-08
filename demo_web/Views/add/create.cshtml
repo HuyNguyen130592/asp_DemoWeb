@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>create</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("create","add",FormMethod.Post,new {@enctype= "multipart/form-data" }))
+        {
+            <div>
+                <label>ID</label>
+                @Html.TextBox("id", null, new { @placeholder = "id" })
+            </div>
+            <div>
+                <label>Name</label>
+               <select name="name">
+                   <option selected="selected">chọn tên</option>
+                   <option value="v">v</option>
+                   <option value="m">m</option>
+                   
+
+               </select>
+            </div>
+            <div>
+                <input type="file"name="img"/>
+            </div>
+            <div><input type="submit" value="Gửi"/></div>
+        }
+    </div>
+</body>
+</html>
